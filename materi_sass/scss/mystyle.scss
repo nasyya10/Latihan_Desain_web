@@ -1,0 +1,93 @@
+$color1: white;
+$color2: rgb(150, 30, 50);
+$color3: rgb(255, 144, 160);
+$color4: rgb(248, 221, 225);
+$color5: rgb(255, 183, 195);
+$color6: rgb(110, 110, 255);
+$color7: rgb(255, 98, 124);
+$color8: rgb(185, 63, 83);
+$breakpoint1: 0;
+$breakpoint2: 1em;
+$fontSize1: 18px;
+$fontSize2: 24px;
+$position1: center;
+$position2: flex;
+$position3: underline;
+$fontFamily: Arial, sans-serif;
+$fontWight: bold;
+$listStyle: none;
+
+body{
+  background-color: $color4;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background: $color3;
+  color: $color1;
+  text-align: $position1;
+  padding: $breakpoint2;
+  font-size: $fontSize2;
+  font-weight: $fontWight;
+}
+
+nav{
+  background: $color7;
+
+  ul {
+    list-style: $listStyle;
+    padding: 0;
+    margin: 0;
+    display: $position2;
+    justify-content: $position1;
+  }
+
+  li{
+    margin: 0 1em;
+  }
+
+  a{
+    color: $color1;
+    text-decoration: none;
+    &:hover {
+      text-decoration: $position3;
+    }
+  }
+}
+
+section {
+  padding: 2em;
+  h2 {
+    font-size: $fontSize2;
+    font-weight: $fontWight;
+    color: $color2;
+  }
+  p {
+    font-size: $fontSize1;
+    color: $color8;
+  }
+  #container{
+    background-color: $color5;
+    padding: 2em;
+    margin-top: 2em;
+    color: $color8;
+  }
+}
+
+footer {
+  background-color: $color2;
+  text-align: $position1;
+  padding: 1em;
+  p {
+    font-size: $fontSize1;
+    color: $color1;
+  }
+  a{
+    color:$color6;
+    text-decoration: none;
+    &:hover{
+      text-decoration: $breakpoint2;
+    }
+  }
+}

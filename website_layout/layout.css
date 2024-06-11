@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style header*/
+.header {
+  background-color: #FFCBCB;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style nav bar*/
+.topnav {
+  overflow: hidden;
+  background-color: #FFB1B1;
+}
+
+/* Style nav link*/
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Ganti warna pada hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* buat klom unique*/
+.column {
+  float: left;
+  padding: 10px;
+}
+
+/* sisi kanan dan kiri kolom */
+.column.side {
+  width: 25%;
+}
+
+/* sisi tengah kolom */
+.column.middle {
+  width: 50%;
+}
+
+/* hapus pelampung setelah kolom */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Layout responsive ( buat kolom stuck ) */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+/* Style pada footer */
+.footer {
+  background-color: #bfeffd;
+  padding: 10px;
+  text-align: center;
+}

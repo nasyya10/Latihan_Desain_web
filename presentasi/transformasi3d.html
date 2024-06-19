@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Transformasi 3D dengan CSS</title>
+  <style>
+    .container {
+      perspective: 1000px; /* Membuat efek perspektif */
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: lightpink;
+      transform-style: preserve-3d; /* Memastikan transformasi 3D pada child elements */
+      transform: rotateY(45deg) rotateX(45deg); /* Rotasi pada sumbu Y dan X */
+      transition: transform 1s; /* Animasi transisi */
+    }
+
+    .box:hover {
+      transform: rotateY(0deg) rotateX(0deg); /* Rotasi kembali ke posisi awal saat hover */
+    }
+
+    h1 {
+      color: #fff;
+      text-align: center;
+      transform: translateZ(50px); /* Memindahkan teks ke depan */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h1>Ini adalah Box 3D</h1>
+    </div>
+  </div>
+</body>
+</html>

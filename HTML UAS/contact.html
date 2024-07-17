@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Flower</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+    
+        <a href="#" class="logo">Sun<span>&</span>Moon</a>
+    
+        <nav class="navbar">
+            <a href="/index.html">Home</a>
+            <a href="/produk.html">Product</a>
+            <a href="/about us.html">About me</a>
+            <a href="/contact.html">Contact us</a>
+        </nav>
+    
+        <div class="icon">
+            <a href="https://web.whatsapp.com/send?text=Hello&phone=+62 856-0434-5435">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/sunandmoon.flows/">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    
+    </header>
+
+<div class="container">
+  <h1>Kontak Kami</h1>
+  <h3>Send your order in here!</h3>
+  <form id="contactForm">
+      <div class="form-group">
+          <label for="name">Nama:</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+          <label for="message">Pesan:</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Kirim</button>
+  </form>
+</div>
+
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="successModalLabel">Berhasil</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Pesan Anda telah berhasil dikirim.
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function() {
+      $('#contactForm').on('submit', function(e) {
+          e.preventDefault();
+          $('#successModal').modal('show');
+      });
+  });
+</script>
+</body>
+</html>
